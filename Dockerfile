@@ -1,9 +1,9 @@
 FROM ghcr.io/asfopensarlab/deployment-opensarlab-container_sar:v1.0.1
 
 # add cmake
-RUN apt-get update -y &&\
-    apt-get update &&\
-    apt-get install -y cmake
+RUN sudo apt-get update -y &&\
+    sudo apt-get update &&\
+    sudo apt-get install -y cmake
 
 # install pygmt, openpyxl, cartopy
 RUN mamba install -c conda-forge \
