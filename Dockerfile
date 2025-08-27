@@ -7,8 +7,6 @@ RUN apt-get update -y &&\
     apt-get update &&\
     apt-get install -y cmake
 
-USER jovyan
-
 # install pygmt, openpyxl, cartopy
 RUN mamba install -c conda-forge \
     cartopy \
@@ -23,3 +21,6 @@ RUN python -m pip install nvector \
     igrf &&\
     # elevate path permission for igrf
     chmod -R 777 /opt/conda/lib/python3.11/site-packages/igrf
+
+WORKDIR /home/jovyan
+USER jovyan
