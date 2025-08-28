@@ -14,6 +14,7 @@ RUN mamba install -c conda-forge \
     openpyxl \
     pygmt \
     scipy \
+    sqlite==3.46.0 \
      -y
 
 # install nvector and igrf
